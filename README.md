@@ -31,9 +31,13 @@ An API that allows stores menu items and stores orders for viewing on a kitchen 
 Obtain information from one specific menu item using the id of the menu item.
 
 + Parameters
+
     + id - ID of the menu item in the form "_XXXXXXXXX..." where X are integers and letters in a MongoDB format.
+    
 ### Get Individual Menu Item [GET]
+
 + Response 200 (application/json)
+
         {
             "_id": "5813c3a2a01f27000381c38b",
             "name": "Pad Thai",
@@ -41,10 +45,15 @@ Obtain information from one specific menu item using the id of the menu item.
             "category": "Specialties",
             "description": "Rice noodles stir-fried with chicken, shrimp, eggs, bean sprouts, scallions, peanuts and Pad Thai sauce. Served with a wedge of lime. (The National dish of Thailand)"
         }
+        
 ## List of Orders [/rene-thai-orders]
+
 Obtain a list of orders submitted by customers for view in the kitchen.
+
 ### Get Order List [GET]
+
 + Response 200 (application/json)
+
         [
             {
                 _id: "5817fbc4feab6500036999e0",
@@ -75,11 +84,17 @@ Obtain a list of orders submitted by customers for view in the kitchen.
         ]
         
 ## Individual Order [/rene-thai-orders/{id}]
+
 Obtain an individual order submitted to the kitchen.
+
 + Parameters
+
     + id - ID of the order in the form "_XXXXXXXXX..." where X are integers and letters in a MongoDB format.
+    
 ### Get Individual Order [GET]
+
 + Response 200 (application/json)
+
         {
             _id: "5817fbc4feab6500036999e0",
             username: "New Order",
